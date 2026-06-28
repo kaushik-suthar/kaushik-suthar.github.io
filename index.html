@@ -87,7 +87,7 @@
 <!-- BUG FIX #3: live @babel/standalone JIT transpiler removed. The JSX in
      src/app.jsx is pre-compiled to plain JS (see app below) — see SETUP.md
      to rebuild it after editing the source. -->
-<!-- Firebase compat SDK — loads harmlessly even if FIREBASE_CONFIG (in the
+<!-- Firebase compat SDK — loads harmlessly even if firebaseConfig (in the
      script below) is still left as placeholders; the app simply runs in
      local mode until you fill it in. See SETUP.md. -->
 <script src="https://www.gstatic.com/firebasejs/12.15.0/firebase-app-compat.js"></script>
@@ -127,11 +127,11 @@ const firebaseConfig = {
   appId: "1:1094559602579:web:610558281d1aabcdecba66",
   measurementId: "G-Y1JEV41SCM"
 };
-const FIREBASE_CONFIGURED = !!(FIREBASE_CONFIG.apiKey && !FIREBASE_CONFIG.apiKey.startsWith("AIzaSyBMnogBt0BZlqkOhCt436ijLClUWzz42RI"));
+const FIREBASE_CONFIGURED = !!(firebaseConfig.apiKey && !firebaseConfig.apiKey.startsWith("PASTE_"));
 let fbAuth = null, fbDb = null;
 if (FIREBASE_CONFIGURED && window.firebase) {
     try {
-        firebase.initializeApp(FIREBASE_CONFIG);
+        firebase.initializeApp(firebaseConfig);
         fbAuth = firebase.auth();
         fbDb = firebase.firestore();
         // Best-effort offline cache; harmless if unsupported.
