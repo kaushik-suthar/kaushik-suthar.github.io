@@ -1,9 +1,0 @@
-{
-  "name": "iNDEED — Life System",
-  "short_name": "iNDEED",
-  "start_url": "./indeed.html",
-  "display": "standalone",
-  "background_color": "#050508",
-  "theme_color": "#050508",
-  "icons": []
-}
