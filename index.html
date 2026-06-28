@@ -127,7 +127,7 @@ const firebaseConfig = {
   appId: "1:1094559602579:web:610558281d1aabcdecba66",
   measurementId: "G-Y1JEV41SCM"
 };
-const firebaseConfigURED = !!(firebaseConfig.apiKey && !firebaseConfig.apiKey.startsWith("PASTE_"));
+const firebaseConfig = !!(firebaseConfig.apiKey && !firebaseConfig.apiKey.startsWith("PASTE_"));
 let fbAuth = null, fbDb = null;
 if (firebaseConfigURED && window.firebase) {
     try {
